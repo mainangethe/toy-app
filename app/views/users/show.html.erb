@@ -9,6 +9,15 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+<strong>Posts (<%= @user.microposts.count %>)</strong>
+
+<% @user.microposts.each_with_index do |post, index| %>
+  
+  <p>
+    <%= "#{index + 1}\." %>
+    <%= post.content %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
