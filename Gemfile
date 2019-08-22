@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
+ruby                           '2.3.7'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'awesome_print',            '1.8.0'
 gem 'coffee-rails',             '4.2.2'
 gem 'jbuilder',                 '2.7.0'
 gem 'jquery-rails',             '4.3.1'
@@ -13,6 +16,7 @@ gem 'rails',                    '5.1.6'
 gem 'sass-rails',               '5.0.6'
 gem 'turbolinks',               '5.0.1'
 gem 'uglifier',                 '3.2.0'
+
 
 group :development, :test do
   gem 'byebug',                 '9.0.6', platform: :mri
